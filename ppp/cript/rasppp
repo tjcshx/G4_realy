@@ -1,0 +1,58 @@
+# /etc/ppp/peers/rasppp
+
+# Usage: sudo pppd call rasppp
+
+# 连接调试时隐藏密码
+hide-password
+
+# 该手机不需要身份验证4
+noauth
+
+# 用于呼叫控制脚本
+connect '/usr/sbin/chat -s -v -f /etc/ppp/peers/rasppp_chat_connect'
+
+# 断开连接脚本
+disconnect '/usr/sbin/chat -s -v -f /etc/ppp/peers/rasppp_chat_disconnect'
+
+# 调试信息
+debug
+
+# 4G模块
+/dev/ttyUSB2
+
+# 串口波特率
+115200
+
+# 使用默认路由
+defaultroute
+
+# 不指定默认IP
+noipdefault
+
+# 不使用PPP压缩
+novj
+novjccomp
+noccp
+ipcp-accept-local
+ipcp-accept-remote
+local
+
+# 最好锁定串行总线
+lock
+dump
+
+# 保持pppd连接到终端
+nodetach
+
+# 用户名 密码
+# user
+# password
+#移动，联通拨号不需要用户名密码，文末给出不同运营商的配置
+
+# 硬件控制流
+crtscts
+remotename 3gppp
+ipparam 3gppp
+
+# 请求最多两个DNS服务器地址
+usepeerdns

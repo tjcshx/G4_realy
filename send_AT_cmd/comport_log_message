@@ -1,0 +1,18 @@
+tlv_client log message:
+ INFO,File: send_msg.c, Func: main, Line :42,information is: init uart arguments done.
+ 
+tlv_client log message:
+ ERROR,File: comport.c, Func: open_uart, Line :391,information is: Open device failure:Bad address
+ 
+tlv_client log message:
+ ERROR,File: send_msg.c, Func: main, Line :47,information is: open device failed:Bad address.
+ 
+tlv_client log message:
+ INFO,File: send_msg.c, Func: main, Line :42,information is: init uart arguments done.
+ 
+tlv_client log message:
+ ERROR,File: comport.c, Func: open_uart, Line :391,information is: Open device failure:Bad address
+ 
+tlv_client log message:
+ ERROR,File: send_msg.c, Func: main, Line :47,information is: open device failed:Bad address.
+ 

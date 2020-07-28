@@ -1,0 +1,19 @@
+# 连续15秒，收到以下字符，则退出执行
+TIMEOUT 15
+ABORT   "BUSY"
+ABORT   "ERROR"
+ABORT   "NO ANSWER"
+ABORT   "NO CARRTER"
+ABORT   "NO DIALTONE"
+
+# 40秒内没有收到指定字符，则退出
+# 例如 OK \rATZ,发送ATZ，希望收到的是OK
+""AT
+OK \rATZ
+
+# 建立连接，联通为3gnet,文末给出各运营商配置
+OK \rAT+CGDCONT=1,"IP","3gnet"
+
+# 拨号,*99#是联通的拨号号码
+OK-AT-OK ATDT*99#
+CONNECT \d\c
